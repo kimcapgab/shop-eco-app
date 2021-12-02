@@ -139,8 +139,16 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 ### Strengths:
 
+I have a solid understanding on GET and POST and do not anticipate having too many issues with this. I'm also highly interested in my topic, which is my motivation to make sure my page looks really nice and is functional.
+
 ### Weaknesses:
+
+I tend to get ambitions on my ideas. I need to focus on my MVPs before I can even touch my Post-MVPs.
 
 ### Opportunities:
 
+This project will give me an opportunity to hone in the skills I've been learning these past few weeks
+
 ### Threats:
+
+When I encounter an issue, I tend to spend my wheels and try to figure it out on my own. I need to just limit myself to a certain time frame, and if I can't figure it out, reach out for help.
