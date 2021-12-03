@@ -12,7 +12,7 @@ export default function Items(props) {
     })
     console.log(foundTag)
     setItem(foundTag)
-  },[])
+  },[params.tags, props.items])
     
 
   return (
@@ -23,6 +23,9 @@ export default function Items(props) {
         <h1>{item.fields.name}</h1>
         <p>{item.fields.description}</p>
         <p>{item.fields.url}</p>
+        <p>{item.fields.insta}</p>
+        <p>{item.fields.email}</p>
+        <img key={item.fields.name} src={item.fields.image} width="250px" />
         </>
       }
     </div>
