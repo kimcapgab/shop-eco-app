@@ -5,6 +5,7 @@ import { BASE_URL, config } from "./services/index"
 import {Route, Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Items from './components/Items';
+import Form from "./components/Form"
 
 function App() {
   const [items, setItems] = useState([])
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar items={items}  />
+      <Navbar />
       <Routes>
         <Route
           path='/'
@@ -31,8 +32,8 @@ function App() {
           }
         />
         <Route
-          path='/items'
-          element={<Items items={items} />}
+          path='/new'
+          element={<Form />}
         />
         <Route
           path='/items/:tags'
