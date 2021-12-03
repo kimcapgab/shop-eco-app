@@ -1,33 +1,41 @@
-import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import {useParams} from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Items(props) {
-  const [item, setItem] = useState([])
-  const params = useParams()
+  const [items, setItems] = useState([]);
+  const params = useParams();
+
+  // const filterarr = props.items.filter(item => item.fields.tags === params.tags)
+  // console.log(filterarr)
 
   useEffect(() => {
-    const foundTag = props.items.find(item => {
-      return item.fields.tags === params.tags
-    })
-    console.log(foundTag)
-    setItem(foundTag)
-  },[params.tags, props.items])
-    
+    const foundTags = props.items.filter((item) => {
+      return item.fields.tags === params.tags;
+    });
+
+    setItems(foundTags);
+    console.log(foundTags);
+  }, [params.tags, props.items]);
 
   return (
     <div>
-      {item && item.fields &&
-        <>
-        <h1>Shops</h1>
-        <h1>{item.fields.name}</h1>
-        <p>{item.fields.description}</p>
-        <p>{item.fields.url}</p>
-        <p>{item.fields.insta}</p>
-        <p>{item.fields.email}</p>
-        <img key={item.fields.name} src={item.fields.image} width="250px" />
-        </>
-      }
+          <h1>Shops</h1>
+          {items.map((item) => (
+            <div>
+              <h1>{item.fields.name}</h1>
+              <p>{item.fields.description}</p>
+              <p>{item.fields.url}</p>
+              <p>{item.fields.insta}</p>
+              <p>{item.fields.email}</p>
+              <img
+                key={item.fields.name}
+                src={item.fields.image}
+                width="250px"
+                alt="display"
+              />
+            </div>
+          ))}
     </div>
-  )
+  );
 }

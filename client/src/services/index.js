@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 export const BASE_URL =
   `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/items`
