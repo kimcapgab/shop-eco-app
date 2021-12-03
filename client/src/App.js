@@ -1,10 +1,13 @@
 import './App.css';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import {BASE_URL, config} from "./services/index"
+import { BASE_URL, config } from "./services/index"
+import {Route, Routes} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Items from './components/Items';
 
 function App() {
-  const [items, setItems] = useState('')
+  const [items, setItems] = useState([])
 
   useEffect(() => {
     const getAllItems = async () => {
@@ -17,7 +20,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1>test</h1>
+      <Navbar items={items}  />
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <h2>Promoting eco-friendly, small shops doing their part in creating products that consider the planet
+              and the people making them at every step of the way
+            </h2>
+          }
+        />
+        <Route
+          path='/items'
+          element={<Items items={items} />}
+        />
+        <Route
+          path='/items/:tags'
+          element={<Items items={items}  />}
+        />
+      </Routes>
     </div>
   );
 }
