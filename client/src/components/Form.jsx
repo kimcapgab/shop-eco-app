@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { postShop } from "../services"
+
 
 export default function Form() {
   const [name, setName] = useState('')
@@ -9,9 +11,23 @@ export default function Form() {
   const [image, setImage] = useState('')
   const [tags, setTags] = useState('')
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const newShop = {
+      name,
+      description,
+      url,
+      insta,
+      email,
+      image,
+      tags,
+    }
+    await postShop(newShop)
+  }
+
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={name}
@@ -61,6 +77,7 @@ export default function Form() {
         placeholder="Clothing, Furniture, or Candle"
         onChange={(e) => setTags(e.target.value)}
       />
+      <button>Submit</button>
     </form>
   )
 }
