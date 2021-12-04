@@ -9,6 +9,7 @@ import Form from "./components/Form"
 
 function App() {
   const [items, setItems] = useState([])
+  const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
     const getAllItems = async () => {
@@ -16,7 +17,7 @@ function App() {
       setItems(response.data.records)
     }
     getAllItems()
-  },[])
+  },[toggle])
 
 
   return (
@@ -33,7 +34,7 @@ function App() {
         />
         <Route
           path='/new'
-          element={<Form />}
+          element={<Form setToggle={setToggle} />}
         />
         <Route
           path='/items/:tags'

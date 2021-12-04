@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { postShop } from "../services"
+import { useNavigate, useParams } from "react-router-dom"
 
 
-export default function Form() {
+export default function Form(props) {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [url, setURL] = useState('')
@@ -10,6 +11,8 @@ export default function Form() {
   const [email, setEmail] = useState('')
   const [image, setImage] = useState('')
   const [tags, setTags] = useState('')
+  const navigate = useNavigate()
+  const params = useParams()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,6 +26,8 @@ export default function Form() {
       tags,
     }
     await postShop(newShop)
+    props.setToggle(prevToggle => !prevToggle)
+    navigate(`/items/${tags}`)
   }
 
 
