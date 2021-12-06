@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { postShop } from "../services"
 import { useNavigate, useParams } from "react-router-dom"
+import Button from '@mui/material/Button'
 
 
 export default function Form(props) {
@@ -82,7 +83,7 @@ export default function Form(props) {
         placeholder="Clothing, Furniture, or Candle"
         onChange={(e) => setTags(e.target.value)}
       />
-      <button>Submit</button>
+      <Button style={{backgroundColor: '#01161E'}} variant="contained">Submit</Button>
     </form>
   )
 }

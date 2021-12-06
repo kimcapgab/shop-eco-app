@@ -1,3 +1,13 @@
+body {
+  background-color: #598392;
+  color: #01161e;
+}
+
+.navbar {
+  background-color: #aec3b0;
+  padding: 30px;
+}
+
 .App {
   text-align: center;
 }

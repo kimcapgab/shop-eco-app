@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className="navbar">
       <Link to='/' >ShopEco</Link>
       <Link to='/items/Furniture' >Furniture</Link>
       <Link to="/items/Clothing" >Clothing</Link>
