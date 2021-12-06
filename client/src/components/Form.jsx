@@ -121,12 +121,13 @@ export default function Form(props) {
       </FormControl> */}
 
 <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+      <FormControl required sx={{ m: 2, minWidth: 180 }}>
+        <InputLabel id="demo-simple-select-label">Select Category</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={tags}
+          
           label="Tag"
           onChange={(e) => setTags(e.target.value)}
         >
