@@ -55,3 +55,27 @@ a.other_nav {
   font-size: 32px;
   margin: 15px;
 }
+
+.footer_container {
+  background-color: #aec3b0;
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.footer_in {
+  align-content: space-between;
+  flex-direction: column;
+}
+.footer_in p {
+  margin: 5px;
+}
+
+.footer_connect {
+  display: inline;
+}

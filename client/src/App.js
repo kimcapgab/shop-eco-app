@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import Items from "./components/Items";
 import Form from "./components/Form";
 import HomeImage from "./components/HomeImage";
+import Footer from "./components/Footer";
+import Featured from "./components/Featured";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -27,12 +29,16 @@ function App() {
         <Route
           path="/"
           element={
+            <>
             <HomeImage />
+            <Featured />
+            </>
           }
         />
         <Route path="/new" element={<Form setToggle={setToggle} />} />
         <Route path="/items/:tags" element={<Items items={items} />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
