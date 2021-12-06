@@ -83,13 +83,11 @@ export default function Form(props) {
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
-        
           <FormControl required sx={{ m: 2, minWidth: 180 }}>
             <InputLabel id="demo-simple-select-label">
               Select Category
             </InputLabel>
           <Select
-              required
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={tags}
@@ -100,7 +98,7 @@ export default function Form(props) {
               <MenuItem value="Clothing">Clothing</MenuItem>
               <MenuItem value="Candles">Candles</MenuItem>
             </Select>
-          </FormControl>
+        </FormControl>
         </Box>
 
         <Button

@@ -8,6 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import InstagramIcon from '@mui/icons-material/Instagram';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function Items(props) {
   const [items, setItems] = useState([]);
@@ -42,12 +43,18 @@ export default function Items(props) {
               </Typography>
             </CardContent>
             <CardActions>
-            <a href={item.fields.url} target="_blank" >
+            <a href={item.fields.url} target="_blank" rel="noreferrer" >
               <Button size="small">Visit Shop</Button>
               </a>
-            <a href={item.fields.insta} target="_blank">
+            <a href={item.fields.insta} target="_blank" rel="noreferrer" >
               <InstagramIcon />
               </a>
+
+              
+                <a href={`mailto:${item.fields.email}`} target="_blank" rel="noreferrer" >
+                <EmailIcon />
+                </a>
+              
             </CardActions>
           </Card>
         </div>
