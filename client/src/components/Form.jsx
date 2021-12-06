@@ -2,11 +2,16 @@ import { useState } from "react"
 import { postShop } from "../services"
 import { useNavigate, useParams } from "react-router-dom"
 import Button from '@mui/material/Button'
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
+// import Radio from '@mui/material/Radio';
+// import RadioGroup from '@mui/material/RadioGroup';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import FormControl from '@mui/material/FormControl';
+// import FormLabel from '@mui/material/FormLabel';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import Select from '@mui/material/Select';
 
 
 export default function Form(props) {
@@ -88,7 +93,7 @@ export default function Form(props) {
         onChange={(e) => setTags(e.target.value)}
       /> */}
 
-      <FormControl component="fieldset">
+      {/* <FormControl component="fieldset">
         <FormLabel component="legend">Category</FormLabel>
         <RadioGroup
           aria-label="category"
@@ -113,7 +118,29 @@ export default function Form(props) {
             label="Candles"
           />
         </RadioGroup>
+      </FormControl> */}
+
+<Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={tags}
+          label="Tag"
+          onChange={(e) => setTags(e.target.value)}
+        >
+          <MenuItem value="Furniture">Furniture</MenuItem>
+          <MenuItem value="Clothing">Clothing</MenuItem>
+          <MenuItem value="Candles">Candles</MenuItem>
+        </Select>
       </FormControl>
+    </Box>
+
+
+
+
+
 
       <Button
         style={{ backgroundColor: "#01161E" }}
