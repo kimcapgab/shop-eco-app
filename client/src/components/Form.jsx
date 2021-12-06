@@ -56,28 +56,29 @@ export default function Form(props) {
           id="outlined-description"
           label="Description"
           value={description}
+          multiline
           onChange={(e) => setDescription(e.target.value)}
         />
         <TextField
-          id="outlined-description"
+          id="outlined-url"
           label="Shop's Website"
           value={url}
           onChange={(e) => setURL(e.target.value)}
         />
         <TextField
-          id="outlined-description"
+          id="outlined-insta"
           label="Instagram URL"
           value={insta}
           onChange={(e) => setInsta(e.target.value)}
         />
         <TextField
-          id="outlined-description"
+          id="outlined-email"
           label="Shop's Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
-          id="outlined-description"
+          id="outlined-image"
           label="Image URL"
           value={image}
           onChange={(e) => setImage(e.target.value)}
@@ -87,7 +88,8 @@ export default function Form(props) {
             <InputLabel id="demo-simple-select-label">
               Select Category
             </InputLabel>
-            <Select
+          <Select
+              required
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={tags}
