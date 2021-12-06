@@ -1,18 +1,13 @@
-import { useState } from "react"
-import { postShop } from "../services"
-import { useNavigate, useParams } from "react-router-dom"
-import Button from '@mui/material/Button'
-// import Radio from '@mui/material/Radio';
-// import RadioGroup from '@mui/material/RadioGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import FormControl from '@mui/material/FormControl';
-// import FormLabel from '@mui/material/FormLabel';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-
+import { useState } from "react";
+import { postShop } from "../services";
+import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import TextField from "@mui/material/TextField";
 
 export default function Form(props) {
   const [name, setName] = useState("");
@@ -23,7 +18,7 @@ export default function Form(props) {
   const [image, setImage] = useState("");
   const [tags, setTags] = useState("");
   const navigate = useNavigate();
-  const params = useParams();
+  // const params = useParams();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,113 +38,77 @@ export default function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={name}
-        name="name"
-        placeholder="Enter Shop's Name"
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="text"
-        value={description}
-        name="description"
-        placeholder="Description"
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <input
-        type="text"
-        value={url}
-        name="url"
-        placeholder="Shop's Website"
-        onChange={(e) => setURL(e.target.value)}
-      />
-      <input
-        type="text"
-        value={insta}
-        name="insta"
-        placeholder="Shops's Instagram URL"
-        onChange={(e) => setInsta(e.target.value)}
-      />
-      <input
-        type="text"
-        value={email}
-        name="email"
-        placeholder="Shop's Email Address"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="text"
-        value={image}
-        name="image"
-        placeholder="Image URL"
-        onChange={(e) => setImage(e.target.value)}
-      />
-      {/* <input
-        type="text"
-        value={tags}
-        name="tags"
-        placeholder="Clothing, Furniture, or Candle"
-        onChange={(e) => setTags(e.target.value)}
-      /> */}
-
-      {/* <FormControl component="fieldset">
-        <FormLabel component="legend">Category</FormLabel>
-        <RadioGroup
-          aria-label="category"
-          defaultValue="Furniture"
-          value={tags}
-          onChange={(e) => setTags(e.target.value)}
-          name="radio-buttons-group"
-        >
-          <FormControlLabel
-            value="Furniture"
-            control={<Radio />}
-            label="Furniture"
-          />
-          <FormControlLabel
-            value="Clothing"
-            control={<Radio />}
-            label="Clothing"
-          />
-          <FormControlLabel
-            value="Candles"
-            control={<Radio />}
-            label="Candles"
-          />
-        </RadioGroup>
-      </FormControl> */}
-
-<Box sx={{ minWidth: 120 }}>
-      <FormControl required sx={{ m: 2, minWidth: 180 }}>
-        <InputLabel id="demo-simple-select-label">Select Category</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={tags}
-          
-          label="Tag"
-          onChange={(e) => setTags(e.target.value)}
-        >
-          <MenuItem value="Furniture">Furniture</MenuItem>
-          <MenuItem value="Clothing">Clothing</MenuItem>
-          <MenuItem value="Candles">Candles</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-
-
-
-
-
-
-      <Button
-        style={{ backgroundColor: "#01161E" }}
-        variant="contained"
-        type="submit"
+      <Box
+        component="form"
+        sx={{
+          "& > :not(style)": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
       >
-        Submit
-      </Button>
+        <TextField
+          id="outlined-name"
+          label="Shop's Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <TextField
+          id="outlined-description"
+          label="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <TextField
+          id="outlined-description"
+          label="Shop's Website"
+          value={url}
+          onChange={(e) => setURL(e.target.value)}
+        />
+        <TextField
+          id="outlined-description"
+          label="Instagram URL"
+          value={insta}
+          onChange={(e) => setInsta(e.target.value)}
+        />
+        <TextField
+          id="outlined-description"
+          label="Shop's Email Address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          id="outlined-description"
+          label="Image URL"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
+        
+          <FormControl required sx={{ m: 2, minWidth: 180 }}>
+            <InputLabel id="demo-simple-select-label">
+              Select Category
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={tags}
+              label="Tag"
+              onChange={(e) => setTags(e.target.value)}
+            >
+              <MenuItem value="Furniture">Furniture</MenuItem>
+              <MenuItem value="Clothing">Clothing</MenuItem>
+              <MenuItem value="Candles">Candles</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+
+        <Button
+          style={{ backgroundColor: "#01161E" }}
+          variant="contained"
+          type="submit"
+        >
+          Submit
+        </Button>
+      
     </form>
   );
 }
