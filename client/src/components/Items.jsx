@@ -7,6 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Items(props) {
   const [items, setItems] = useState([]);
@@ -41,22 +42,14 @@ export default function Items(props) {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
+            <a href={item.fields.url} target="_blank" >
+              <Button size="small">Visit Shop</Button>
+              </a>
+            <a href={item.fields.insta} target="_blank">
+              <InstagramIcon />
+              </a>
             </CardActions>
           </Card>
-{/* 
-          <h1>{item.fields.name}</h1>
-          <p>{item.fields.description}</p>
-          <p>{item.fields.url}</p>
-          <p>{item.fields.insta}</p>
-          <p>{item.fields.email}</p>
-          <img
-            key={item.fields.name}
-            src={item.fields.image}
-            width="250px"
-            alt="display"
-          /> */}
         </div>
       ))}
     </div>
