@@ -26,7 +26,8 @@ export default function Items(props) {
     <div>
       <h1>Shops</h1>
       {items.map((item) => (
-        <div>
+        <div className="card_container">
+        <div className="card_items">
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
@@ -57,7 +58,8 @@ export default function Items(props) {
               
             </CardActions>
           </Card>
-        </div>
+          </div>
+          </div>
       ))}
     </div>
   );

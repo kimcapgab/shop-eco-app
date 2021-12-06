@@ -19,6 +19,8 @@ a {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .navbar a {
@@ -78,4 +80,13 @@ a.other_nav {
 
 .footer_connect {
   display: inline;
+}
+
+.card_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card_items {
+  display: flex;
 }
