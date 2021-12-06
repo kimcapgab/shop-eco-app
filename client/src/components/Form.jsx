@@ -2,21 +2,26 @@ import { useState } from "react"
 import { postShop } from "../services"
 import { useNavigate, useParams } from "react-router-dom"
 import Button from '@mui/material/Button'
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 
 export default function Form(props) {
-  const [name, setName] = useState('')
-  const [description, setDescription] = useState('')
-  const [url, setURL] = useState('')
-  const [insta, setInsta] = useState('')
-  const [email, setEmail] = useState('')
-  const [image, setImage] = useState('')
-  const [tags, setTags] = useState('')
-  const navigate = useNavigate()
-  const params = useParams()
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [url, setURL] = useState("");
+  const [insta, setInsta] = useState("");
+  const [email, setEmail] = useState("");
+  const [image, setImage] = useState("");
+  const [tags, setTags] = useState("");
+  const navigate = useNavigate();
+  const params = useParams();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const newShop = {
       name,
       description,
@@ -25,12 +30,11 @@ export default function Form(props) {
       email,
       image,
       tags,
-    }
-    await postShop(newShop)
-    props.setToggle(prevToggle => !prevToggle)
-    navigate(`/items/${tags}`)
-  }
-
+    };
+    await postShop(newShop);
+    props.setToggle((prevToggle) => !prevToggle);
+    navigate(`/items/${tags}`);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -76,14 +80,48 @@ export default function Form(props) {
         placeholder="Image URL"
         onChange={(e) => setImage(e.target.value)}
       />
-      <input
+      {/* <input
         type="text"
         value={tags}
         name="tags"
         placeholder="Clothing, Furniture, or Candle"
         onChange={(e) => setTags(e.target.value)}
-      />
-      <Button style={{backgroundColor: '#01161E'}} variant="contained">Submit</Button>
+      /> */}
+
+      <FormControl component="fieldset">
+        <FormLabel component="legend">Category</FormLabel>
+        <RadioGroup
+          aria-label="category"
+          defaultValue="Furniture"
+          value={tags}
+          onChange={(e) => setTags(e.target.value)}
+          name="radio-buttons-group"
+        >
+          <FormControlLabel
+            value="Furniture"
+            control={<Radio />}
+            label="Furniture"
+          />
+          <FormControlLabel
+            value="Clothing"
+            control={<Radio />}
+            label="Clothing"
+          />
+          <FormControlLabel
+            value="Candles"
+            control={<Radio />}
+            label="Candles"
+          />
+        </RadioGroup>
+      </FormControl>
+
+      <Button
+        style={{ backgroundColor: "#01161E" }}
+        variant="contained"
+        type="submit"
+      >
+        Submit
+      </Button>
     </form>
-  )
+  );
 }
