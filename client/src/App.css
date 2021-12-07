@@ -107,3 +107,22 @@ a.other_nav {
 .slick-slide img {
   display: inline;
 }
+
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    padding: 10px;
+  }
+  .featured_shops img {
+    width: 200px;
+  }
+  .home_in h2 {
+    font-size: 20px;
+    margin: 15px;
+  }
+  .home_in img {
+    width: 300px;
+  }
+  .footer_in p {
+    font-size: 12px;
+  }
+}

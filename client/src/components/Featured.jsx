@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+// Credit: https://react-slick.neostack.com/
 
 
 export default function Featured() {
