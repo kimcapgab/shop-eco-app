@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;1,400;1,500&family=Philosopher:ital,wght@0,700;1,700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap");
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 body {
   background-color: #598392;
@@ -93,4 +95,15 @@ a.other_nav {
 
 .items_container {
   margin: 40px;
+}
+
+.featured_shops {
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.slick-slide img {
+  display: inline;
 }
