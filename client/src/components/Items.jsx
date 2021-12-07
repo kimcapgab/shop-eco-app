@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 
+
+
 export default function Items(props) {
   const [items, setItems] = useState([]);
   const params = useParams();
@@ -50,8 +52,6 @@ export default function Items(props) {
             <a href={item.fields.insta} target="_blank" rel="noreferrer" >
               <InstagramIcon />
               </a>
-
-              
                 <a href={`mailto:${item.fields.email}`} target="_blank" rel="noreferrer" >
                 <EmailIcon />
                 </a>
