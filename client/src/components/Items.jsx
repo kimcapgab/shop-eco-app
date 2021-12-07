@@ -5,12 +5,21 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import EmailIcon from '@mui/icons-material/Email';
+import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailIcon from "@mui/icons-material/Email";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
-
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
 
 export default function Items(props) {
   const [items, setItems] = useState([]);
@@ -25,42 +34,58 @@ export default function Items(props) {
   }, [params.tags, props.items]);
 
   return (
-    <div>
+    <div className="items_container">
       <h1>Shops</h1>
-      {items.map((item) => (
-        <div className="card_container">
-        <div className="card_items">
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              height="250"
-              image={item.fields.image}
-              alt="display_store"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-              {item.fields.name}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              {item.fields.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-            <a href={item.fields.url} target="_blank" rel="noreferrer" >
-              <Button size="small">Visit Shop</Button>
-              </a>
-            <a href={item.fields.insta} target="_blank" rel="noreferrer" >
-              <InstagramIcon />
-              </a>
-                <a href={`mailto:${item.fields.email}`} target="_blank" rel="noreferrer" >
-                <EmailIcon />
-                </a>
-              
-            </CardActions>
-          </Card>
-          </div>
-          </div>
-      ))}
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }} justifyContent="space-around"
+          alignItems="center"
+        >
+          {items.map((item) => (
+            <Grid item xs={2} sm={4} md={4}>
+              <Item>
+                <Card sx={{ maxWidth: 445 }}>
+                  <CardMedia
+                    component="img"
+                    height="250"
+                    image={item.fields.image}
+                    alt="display_store"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {item.fields.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {item.fields.description}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <a href={item.fields.url} target="_blank" rel="noreferrer">
+                          <ShoppingBagIcon />
+                    </a>
+                    <a
+                      href={item.fields.insta}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <InstagramIcon />
+                    </a>
+                    <a
+                      href={`mailto:${item.fields.email}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <EmailIcon />
+                    </a>
+                  </CardActions>
+                </Card>
+              </Item>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </div>
   );
 }

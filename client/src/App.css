@@ -90,3 +90,7 @@ a.other_nav {
 .card_items {
   display: flex;
 }
+
+.items_container {
+  margin: 40px;
+}
