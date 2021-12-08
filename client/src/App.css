@@ -184,12 +184,13 @@ a.other_nav2 {
     margin-right: 0px;
     margin-left: 0px;
   }
-  .featured_shops img {
-    width: 150px;
-  }
+
   .featured_shops {
     margin-bottom: 100px;
+    width: 40%;
+    margin-left: 30%;
   }
+
   .home_in h2 {
     font-size: 15px;
     margin: 15px;
@@ -205,5 +206,46 @@ a.other_nav2 {
 @media only screen and (max-width: 570px) {
   .navbar {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .featured_shops img {
+    width: 200px;
+  }
+  .featured_shops {
+    margin-bottom: 100px;
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .home_container {
+    display: flex;
+  }
+
+  .home_in {
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  .home_in h2 {
+    font-size: 15px;
+    margin: 15px;
+  }
+  .home_in img {
+    width: 250px;
+    margin-top: 25px;
+  }
+  .footer_in p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .featured_shops {
+    margin-bottom: 100px;
+    width: 80%;
+    margin-left: 10%;
   }
 }
