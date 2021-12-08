@@ -108,6 +108,47 @@ a.other_nav {
   display: inline;
 }
 
+.mobile_menu {
+  background-color: #aec3b0;
+  color: #01161e;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile_menu button {
+  color: #01161e;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bolder;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background-color: #aec3b0;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list a {
+  color: #01161e;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+a.home2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+a.form_nav2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+a.other_nav2 {
+  font-size: 15px;
+  margin: 0;
+}
+
 @media only screen and (max-width: 1000px) {
   .navbar {
     padding: 10px;
@@ -158,5 +199,11 @@ a.other_nav {
   }
   .footer_in p {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .navbar {
+    display: none;
   }
 }

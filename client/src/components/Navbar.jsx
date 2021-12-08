@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Hamburger from "./Hamburger";
 
 export default function Navbar() {
 
@@ -22,6 +23,7 @@ export default function Navbar() {
         Submit an Eco-friendly Shop
       </Link>
       </div>
+      <Hamburger />
     </div>
   );
 }
