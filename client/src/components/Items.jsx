@@ -46,7 +46,7 @@ export default function Items(props) {
           {items.map((item) => (
             <Grid item xs={2} sm={4} md={4}>
               <Item>
-                <Card sx={{ maxWidth: 445 }}>
+                <Card sx={{ maxWidth: 800 }}>
                   <CardMedia
                     component="img"
                     height="250"

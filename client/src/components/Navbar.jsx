@@ -23,7 +23,9 @@ export default function Navbar() {
         Submit an Eco-friendly Shop
       </Link>
       </div>
+      <div className="mobile_menu">
       <Hamburger />
+      </div>
     </div>
   );
 }

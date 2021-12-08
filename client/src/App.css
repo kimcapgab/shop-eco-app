@@ -16,6 +16,10 @@ a {
   margin: 25px;
 }
 
+.mobile_menu {
+  display: none;
+}
+
 .navbar {
   background-color: #aec3b0;
   padding: 20px;
