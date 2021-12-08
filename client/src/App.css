@@ -126,3 +126,37 @@ a.other_nav {
     font-size: 12px;
   }
 }
+
+@media only screen and (max-width: 771px) {
+  a.home {
+    font-size: 25px;
+  }
+
+  a.form_nav {
+    font-size: 10px;
+  }
+
+  a.other_nav {
+    font-size: 15px;
+  }
+  a {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .featured_shops img {
+    width: 150px;
+  }
+  .featured_shops {
+    margin-bottom: 100px;
+  }
+  .home_in h2 {
+    font-size: 15px;
+    margin: 15px;
+  }
+  .home_in img {
+    width: 250px;
+  }
+  .footer_in p {
+    font-size: 10px;
+  }
+}

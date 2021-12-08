@@ -16,19 +16,19 @@ export default function Featured() {
     <Slider {...settings}>
         <div className="featured_image">
           <img src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1638553296/Project%202/Screen_Shot_2021-12-03_at_12.41.33_PM_ubqcwr.png"
-            width="300px"
+            width="300px" alt="displaying_shops1"
           />
         <h3>Medley</h3>
       </div>
         <div className="featured_image">
           <img src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1638552486/Project%202/Screen_Shot_2021-12-03_at_12.28.03_PM_fxfoyf.png"
-            width="300px"
+            width="300px" alt="displaying_shops2"
           />
         <h3>Whimsy + Row</h3>
       </div>
         <div className="featured_image">
           <img src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1638551926/Project%202/Screen_Shot_2021-12-03_at_12.18.43_PM_cq0cye.png"
-            width="300px"
+            width="300px" alt="displaying_shops3"
           />
         <h3>Keap</h3>
       </div>
