@@ -18,7 +18,7 @@ export default function Form(props) {
   const [image, setImage] = useState("");
   const [tags, setTags] = useState("");
   const navigate = useNavigate();
-  // const params = useParams();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +38,7 @@ export default function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Submit an Eco-friendly Shop below.</h1>
       <Box
         component="form"
         sx={{
@@ -47,12 +48,14 @@ export default function Form(props) {
         autoComplete="off"
       >
         <TextField
+          className="form_input"
           id="outlined-name"
           label="Shop's Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <TextField
+          className="form_input"
           id="outlined-description"
           label="Description"
           value={description}
@@ -60,34 +63,39 @@ export default function Form(props) {
           onChange={(e) => setDescription(e.target.value)}
         />
         <TextField
+          className="form_input"
           id="outlined-url"
           label="Shop's Website"
           value={url}
           onChange={(e) => setURL(e.target.value)}
         />
         <TextField
+          className="form_input"
           id="outlined-insta"
           label="Instagram URL"
           value={insta}
           onChange={(e) => setInsta(e.target.value)}
         />
         <TextField
+          className="form_input"
           id="outlined-email"
           label="Shop's Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
+          className="form_input"
           id="outlined-image"
           label="Image URL"
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
-          <FormControl required sx={{ m: 2, minWidth: 180 }}>
-            <InputLabel id="demo-simple-select-label">
+          <FormControl className="form_dropdown" style={{ backgroundColor: "aliceblue" }} required sx={{ m: 2, minWidth: 180 }}>
+            <InputLabel  id="demo-simple-select-label">
               Select Category
             </InputLabel>
           <Select
+              className="form_dropdown_options"
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={tags}

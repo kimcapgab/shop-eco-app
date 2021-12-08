@@ -17,6 +17,7 @@ export default function Hamburger() {
 
   return (
     <div className="mobile_menu">
+      <h3>Shop Eco</h3>
       <Button
         id="basic-button"
         aria-controls="basic-menu"

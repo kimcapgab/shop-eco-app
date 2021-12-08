@@ -149,6 +149,24 @@ a.other_nav2 {
   margin: 0;
 }
 
+form {
+  background-color: #aec3b0;
+  margin: 50px;
+  padding: 15px;
+  border-radius: 4px;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.form_input {
+  background-color: aliceblue;
+  border-radius: 6px;
+}
+
+.form_dropdown {
+  border-radius: 6px;
+}
+
 @media only screen and (max-width: 1000px) {
   .navbar {
     padding: 10px;
@@ -207,6 +225,13 @@ a.other_nav2 {
   .navbar {
     display: none;
   }
+  form {
+    width: 90%;
+    margin: 15px;
+  }
+  form h1 {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 510px) {
@@ -239,6 +264,13 @@ a.other_nav2 {
   }
   .footer_in p {
     font-size: 10px;
+  }
+  form {
+    width: 80%;
+    margin: 30px;
+  }
+  .css-xn6ruc {
+    margin: 0;
   }
 }
 
