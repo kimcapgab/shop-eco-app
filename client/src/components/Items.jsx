@@ -63,21 +63,21 @@ export default function Items(props) {
                   </CardContent>
                   <CardActions>
                     <a href={item.fields.url} target="_blank" rel="noreferrer">
-                          <ShoppingBagIcon />
+                          <ShoppingBagIcon color="primary" />
                     </a>
                     <a
                       href={item.fields.insta}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <InstagramIcon />
+                      <InstagramIcon color="primary" />
                     </a>
                     <a
                       href={`mailto:${item.fields.email}`}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <EmailIcon />
+                      <EmailIcon color="primary" />
                     </a>
                   </CardActions>
                 </Card>
