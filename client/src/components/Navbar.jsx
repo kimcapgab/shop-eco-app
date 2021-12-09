@@ -5,7 +5,7 @@ export default function Navbar() {
 
 
   return (
-    <div>
+    <div className="navbar_container">
     <div className="navbar">
       <Link className="home" to="/">
         ShopEco
@@ -23,9 +23,9 @@ export default function Navbar() {
         Submit an Eco-friendly Shop
       </Link>
       </div>
-      <div className="mobile_menu">
+      {/* <div className="mobile_menu">
       <Hamburger />
-      </div>
+      </div> */}
     </div>
   );
 }

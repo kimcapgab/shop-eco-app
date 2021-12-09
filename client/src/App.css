@@ -24,9 +24,8 @@ a {
   background-color: #aec3b0;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
   position: sticky;
-  top: 0;
+  justify-content: space-between;
 }
 
 .navbar a {
@@ -169,6 +168,10 @@ form {
 
 .form_dropdown {
   border-radius: 6px;
+}
+
+.css-1t6e9jv-MuiCardActions-root {
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1000px) {
