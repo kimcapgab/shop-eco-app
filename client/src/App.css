@@ -25,6 +25,7 @@ a {
   padding: 20px;
   display: flex;
   position: sticky;
+  top: 0;
   justify-content: space-between;
 }
 
@@ -157,8 +158,8 @@ form {
   margin: 50px;
   padding: 15px;
   border-radius: 4px;
-  width: 70%;
-  margin-left: 15%;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .form_input {
@@ -190,6 +191,16 @@ form {
   }
   .footer_in p {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  form {
+    width: 90%;
+    margin: 15px;
+  }
+  form h1 {
+    font-size: 18px;
   }
 }
 

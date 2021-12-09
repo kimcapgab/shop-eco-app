@@ -9,7 +9,7 @@ import Form from "./components/Form";
 import HomeImage from "./components/HomeImage";
 import Footer from "./components/Footer";
 import Featured from "./components/Featured";
-import Test from "./components/Test";
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -26,7 +26,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Test />
       <Routes>
         <Route
           path="/"
