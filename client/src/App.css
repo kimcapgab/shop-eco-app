@@ -205,8 +205,12 @@ form {
 
 @media only screen and (max-width: 990px) {
   form {
-    width: 90%;
-    margin: 30px;
+    width: 65%;
+    margin-top: 10%;
+    margin-left: 19%;
+  }
+  .css-xn6ruc {
+    margin-left: 15%;
   }
   form h1 {
     font-size: 18px;
@@ -265,8 +269,12 @@ form {
     display: flex;
   }
   form {
-    width: 90%;
+    width: 80%;
     margin: 15px;
+    margin-left: 10%;
+  }
+  .css-xn6ruc {
+    margin-left: 10%;
   }
   form h1 {
     font-size: 18px;

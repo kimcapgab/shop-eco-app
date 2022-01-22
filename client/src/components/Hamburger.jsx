@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Hamburger() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -22,12 +22,10 @@ export default function Hamburger() {
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        
         <MenuIcon />
-        
       </Button>
       <Menu
         id="basic-menu"
@@ -35,34 +33,26 @@ export default function Hamburger() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>
         <Link className="home2" to="/">
-          Home
+          <MenuItem onClick={handleClose}>Home</MenuItem>
         </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
         <Link className="other_nav2" to="/items/Furniture">
-          Furniture
+          <MenuItem onClick={handleClose}>Furniture</MenuItem>
         </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
+
         <Link className="other_nav2" to="/items/Clothing">
-          Clothing
+          <MenuItem onClick={handleClose}>Clothing</MenuItem>
         </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
+
         <Link className="other_nav2" to="/items/Candles">
-          Candles
+          <MenuItem onClick={handleClose}>Candles</MenuItem>
         </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
         <Link className="form_nav2" to="/new">
-          Submit New Shop
+          <MenuItem onClick={handleClose}>Submit New Shop</MenuItem>
         </Link>
-        </MenuItem>
       </Menu>
     </div>
   );
