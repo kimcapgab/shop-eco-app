@@ -86,26 +86,24 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 #### PostMVP
 
-- Edit and Delete shops from the feed and Airtable.
 - Link each shops Instagram accounts in their individual feeds
 - Style using Material UI
 - Add "Featured Shops" that displays three different shops that change with pagination
 - On form, have a drop down that will route the new information to the respective table in Airtable
-- Add Jewelry, Home, and Pet as categories
 
 ## Project Schedule
 
-| Day        | Deliverable                                        | Status     |
-| ---------- | -------------------------------------------------- | ---------- |
-| December 1 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
-| December 2 | Project Approval / Airtable Setup                  | Incomplete |
-| December 3 | Core Application Structure (Components Creation)   | Incomplete |
-| December 4 | GET and POST Data                                  | Incomplete |
-| December 5 | GET and POST Data Con't                            | Incomplete |
-| December 6 | Basic CSS Components                               | Incomplete |
-| December 7 | MVP                                                | Incomplete |
-| December 8 | Post MVP                                           | Incomplete |
-| December 9 | Presentations                                      | Incomplete |
+| Day        | Deliverable                                        | Status   |
+| ---------- | -------------------------------------------------- | -------- |
+| December 1 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete |
+| December 2 | Project Approval / Airtable Setup                  | Complete |
+| December 3 | Core Application Structure (Components Creation)   | Complete |
+| December 4 | GET and POST Data                                  | Complete |
+| December 5 | GET and POST Data Con't                            | Complete |
+| December 6 | Basic CSS Components                               | Complete |
+| December 7 | MVP                                                | Complete |
+| December 8 | Post MVP                                           | Complete |
+| December 9 | Presentations                                      | Complete |
 
 ## Timeframes
 
@@ -115,25 +113,25 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 | Working on Wireframes                              |    H     |      3hrs      |     3hrs      |    3hrs     |
 | Proposal                                           |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Airtable Setup                                     |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Create React App                                   |    H     |     0.5hrs     |      hrs      |     hrs     |
-| Initial Creation of Components                     |    H     |      1hrs      |      hrs      |     hrs     |
-| Home Page and Links the Route to Respective Page   |    H     |      2hrs      |      hrs      |     hrs     |
-| Working with API GET                               |    H     |      2hrs      |      hrs      |     hrs     |
-| GET Data for Furniture Component                   |    H     |     1.5hrs     |      hrs      |     hrs     |
-| GET Data for Clothing Component                    |    H     |     1.5hrs     |      hrs      |     hrs     |
-| GET Data for Candles Component                     |    H     |     1.5hrs     |      hrs      |     hrs     |
-| Submit Page and Links to respective Form           |    H     |      2hrs      |      hrs      |     hrs     |
-| Form for Furniture                                 |    H     |     1.5hrs     |      hrs      |     hrs     |
-| Form for Clothing                                  |    H     |     1.5hrs     |      hrs      |     hrs     |
-| Form for Candles                                   |    H     |     1.5hrs     |      hrs      |     hrs     |
-| Working with API POST                              |    H     |      2hrs      |      hrs      |     hrs     |
-| POST Data for Furniture Component                  |    H     |      2hrs      |      hrs      |     hrs     |
-| POST Data for Clothing Component                   |    H     |      2hrs      |      hrs      |     hrs     |
-| POST Data for Candles Component                    |    H     |      2hrs      |      hrs      |     hrs     |
-| CSS Home                                           |    H     |      2hrs      |      hrs      |     hrs     |
-| CSS for Furniture, Clothing and Candles Components |    H     |      2hrs      |      hrs      |     hrs     |
-| CSS for Submit Form and Form Components            |    H     |      2hrs      |      hrs      |     hrs     |
-| Total                                              |    H     |    40.5hrs     |      hrs      |     hrs     |
+| Create React App                                   |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
+| Initial Creation of Components                     |    H     |      1hrs      |     1hrs      |    1hrs     |
+| Home Page and Links the Route to Respective Page   |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Working with API GET                               |    H     |      2hrs      |     2hrs      |    2hrs     |
+| GET Data for Furniture Component                   |    H     |     1.5hrs     |    0.5hrs     |   0.5hrs    |
+| GET Data for Clothing Component                    |    H     |     1.5hrs     |    0.5hrs     |   0.5hrs    |
+| GET Data for Candles Component                     |    H     |     1.5hrs     |    0.5hrs     |   0.5hrs    |
+| Submit Page and Links to respective Form           |    H     |      2hrs      |     1hrs      |    1hrs     |
+| Form for Furniture                                 |    H     |     1.5hrs     |     0hrs      |    0hrs     |
+| Form for Clothing                                  |    H     |     1.5hrs     |     0hrs      |    0hrs     |
+| Form for Candles                                   |    H     |     1.5hrs     |     0hrs      |    0hrs     |
+| Working with API POST                              |    H     |      2hrs      |    0.5hrs     |   0.5hrs    |
+| POST Data for Furniture Component                  |    H     |      2hrs      |     1hrs      |    1hrs     |
+| POST Data for Clothing Component                   |    H     |      2hrs      |     0hrs      |    0hrs     |
+| POST Data for Candles Component                    |    H     |      2hrs      |     0hrs      |    0hrs     |
+| CSS Home                                           |    H     |      2hrs      |     4hrs      |    4hrs     |
+| CSS for Furniture, Clothing and Candles Components |    H     |      2hrs      |     2hrs      |    2hrs     |
+| CSS for Submit Form and Form Components            |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Total                                              |    H     |    40.5hrs     |      hrs      |    27hrs    |
 
 ## SWOT Analysis
 
@@ -143,7 +141,7 @@ I have a solid understanding on GET and POST and do not anticipate having too ma
 
 ### Weaknesses:
 
-I tend to get ambitions on my ideas. I need to focus on my MVPs before I can even touch my Post-MVPs.
+I tend to get ambitions on my ideas. I need to focus on my MVPs before I can proceed to my Post-MVPs.
 
 ### Opportunities:
 
