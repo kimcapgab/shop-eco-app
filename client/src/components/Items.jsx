@@ -13,6 +13,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import { cyan } from '@mui/material/colors';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -30,7 +31,6 @@ export default function Items(props) {
       return item.fields.tags === params.tags;
     });
     setItems(foundTags);
-    console.log(foundTags);
   }, [params.tags, props.items]);
 
   return (
@@ -39,12 +39,13 @@ export default function Items(props) {
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }} justifyContent="space-around"
+          spacing={{ xs: 2, md: 4 }}
+          columns={{ xs: 4, sm: 8, md: 10 }}
+          justifyContent="space-around"
           alignItems="center"
         >
           {items.map((item) => (
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={8} sm={8} md={4}>
               <Item>
                 <Card sx={{ maxWidth: 800 }}>
                   <CardMedia
@@ -52,6 +53,7 @@ export default function Items(props) {
                     height="250"
                     image={item.fields.image}
                     alt="display_store"
+                    key={item.fields.name}
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
@@ -63,21 +65,21 @@ export default function Items(props) {
                   </CardContent>
                   <CardActions>
                     <a href={item.fields.url} target="_blank" rel="noreferrer">
-                          <ShoppingBagIcon color="primary" />
+                          <ShoppingBagIcon sx={{ color: cyan[800] }} fontSize="large"/>
                     </a>
                     <a
                       href={item.fields.insta}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <InstagramIcon color="primary" />
+                      <InstagramIcon sx={{ color: cyan[800] }} fontSize="large"/>
                     </a>
                     <a
                       href={`mailto:${item.fields.email}`}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <EmailIcon color="primary" />
+                      <EmailIcon sx={{ color: cyan[800] }} fontSize="large"/>
                     </a>
                   </CardActions>
                 </Card>

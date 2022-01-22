@@ -14,11 +14,12 @@ body {
 
 a {
   margin: 25px;
+  text-decoration: none;
 }
-
+/* 
 .mobile_menu {
   display: none;
-}
+} */
 
 .navbar {
   background-color: #aec3b0;
@@ -136,6 +137,14 @@ a.other_nav {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: bolder;
   text-decoration: none;
+  background-color: #aec3b0;
+}
+
+.MuiMenuItem-root {
+  color: #01161e;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
 }
 
 a.home2 {
@@ -197,10 +206,13 @@ form {
 @media only screen and (max-width: 990px) {
   form {
     width: 90%;
-    margin: 15px;
+    margin: 30px;
   }
   form h1 {
     font-size: 18px;
+  }
+  .footer_container {
+    margin-top: 20%;
   }
 }
 
@@ -239,9 +251,18 @@ form {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 2000px) {
+  .mobile_menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
   .navbar {
     display: none;
+  }
+  .mobile_menu {
+    display: flex;
   }
   form {
     width: 90%;
